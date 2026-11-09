@@ -16,19 +16,57 @@
 
 # RICOCHET REAPER
 
-**An [Arcade Phantasm](https://arcade-phantasm.netlify.app/) game** · The browser version: play it on its page once it's built. The Windows exe is [RicochetReaper](https://github.com/CursedPrograms/RicochetReaper).
+**An [Arcade Phantasm](https://arcade-phantasm.netlify.app/) game**
 
-A frantic arena shooter. Enemies come from every direction, your laser charge is limited, and every kill releases the energy to refill it. Chain kills to multiply your score and survive ever more aggressive waves.
+### [Play it](https://cursedprograms.github.io/RicochetReaper/)
 
-**The twist:** Your laser bounces off the walls, so the best shots are complicated ricochets.
+A frantic arena shooter. You're a hooded reaper whose scythe fires a laser, and enemies pour in from every direction. Your laser charge is limited: every kill releases souls that fly back to you and refill it. Chain kills to multiply your score and survive ever more aggressive waves.
 
-## Status
+**The twist:** Your laser bounces off the arena walls and the pillars, so the best shots are complicated ricochets. A bounced shot scores more, releases more souls and is the only way to hit a shielded knight from the front.
 
-In development. Plain HTML, CSS and JavaScript on a canvas: `index.html`, `site/style.css`, `site/game.js`, sound made with Web Audio.
+<div align="center">
+  <img src="images/screenshot-splash.png" alt="RICOCHET REAPER title screen" width="45%"/>
+  <img src="images/screenshot-play.png" alt="RICOCHET REAPER: a bank shot on wave 6 with a x15 chain" width="45%"/>
+</div>
+
+## How to play
+
+- **Reap and recharge.** Each shot costs charge (the bar at the bottom). Kills send souls flying back to you; touch them to refill. Run dry and the scythe only trickles back.
+- **Chain kills.** Every kill inside the chain timer raises the multiplier (top right); bounced kills raise it by two. Several kills with one shot score a DOUBLE / TRIPLE / QUAD REAP bonus.
+- **Bank your shots.** The laser bounces up to three times. The faint dashed line shows where your first two bounces will go. One bounce is a RICOCHET (double points), two or more a BANK shot (x3, x4).
+- **Know your enemies.** Ghouls shamble at you; bats swoop in fast; splitters burst into three when killed; shield knights block any direct shot from the front (hit them from behind, or bounce a shot into them); witches keep their distance and throw curses (your laser burns them out of the air).
+- You have three lives; a hit throws back everything near you and breaks your chain. Clearing every fifth wave gives you a life back. The arena's pillars change every two waves.
+
+## Controls
+
+| | Keyboard + mouse | Keyboard only | Phone / tablet |
+| --- | --- | --- | --- |
+| Move | WASD | Arrow keys | Left thumb stick (left half of the screen) |
+| Aim | Mouse | Q / E (or Z / X), or the way you walk | Right thumb stick |
+| Fire | Left mouse button (hold) | Space (or J / K) | Push the right stick |
+| Pause / mute | P / M | P / M | II / ♪ at the top |
+
+The best score is saved in the browser.
+
+## Versions
+
+- **Browser** (this repo's root): [play it](https://cursedprograms.github.io/RicochetReaper/)
+- **Windows exe**: coming, in `cpp/`
+- **Android**: coming, in `android/`
+
+## Files
+
+- `index.html`: the page (the canvas and the title screen)
+- `site/style.css`: the page's styling
+- `site/game.js`: the game: arena, ricochet ray casting, enemies, waves, chains, drawing, controls
+- `site/sfx.js`: every sound, made with the Web Audio API (no audio files)
+- `images/`: the Cursed logo and the screenshots
+
+Plain HTML5 canvas and JavaScript, no frameworks and no build step. Open `index.html#shot` for the frozen mid-battle scene used for the screenshot.
 
 ## Also in the arcade
 
-[Killer Stardust](https://github.com/CursedPrograms/killer-stardust) · PROTOCOL.hex · SÉANCE · RICOCHET REAPER · GRAVE DANGER · VORTEX · ORBIT · ROCKS OF RUIN · DEVOURER
+[KillerStardust](https://github.com/CursedPrograms/KillerStardust) · ProtocolHex · Seance · [RicochetReaper](https://github.com/CursedPrograms/RicochetReaper) · [GraveDanger](https://github.com/CursedPrograms/GraveDanger) · Vortex · Orbit · RocksOfRuin · Devourer
 
 <br>
 <div align="center">
