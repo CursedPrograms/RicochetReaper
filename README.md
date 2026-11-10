@@ -52,7 +52,20 @@ The best score is saved in the browser.
 
 - **Browser** (this repo's root): [play it](https://cursedprograms.github.io/RicochetReaper/)
 - **Windows exe**: coming, in `cpp/`
-- **Android**: coming, in `android/`
+- **Android**: in `android/`, the APK in [`android/apk/`](android/apk/) (see [Android](#android) below)
+
+## Android
+
+The browser game in an Android app: it plays offline, full screen in landscape, with the sound on from the start
+(Android 7.0 or newer).
+
+- **Download**: the APK in [`android/apk/`](android/apk/). Copy it to the phone and open it (allow installs from
+  unknown sources when asked).
+- **Build it**: the Android SDK and JDK 17, then `android/build.bat` (or `build.ps1`, `build.sh`). It runs
+  `gradlew assembleDebug` and leaves the APK in `android/apk/`. The game's web files are copied into the app at build
+  time, so the browser game at the repo root stays the only copy.
+- **The code**: `android/app/src/main/java/com/synthwomb/ricochetreaper/MainActivity.kt`, a full-screen WebView that serves the
+  game from the app's assets. Press Back twice to leave.
 
 ## Files
 
